@@ -34,3 +34,5 @@ Edit the following file according to your environment.
 cd aws-cognito-angularjs
 gulp server
 ```
+
+### Create client with no secret key

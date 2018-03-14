@@ -53,19 +53,19 @@ app.service('cognitoService', function () {
   // Region
   AWS.config.region = 'us-east-1';
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: 'us-east-1:7b03a871-254e-41fa-8ea9-d545e867467a'
+    IdentityPoolId: '' //enter identity pool id
   });
 
   // Cognito User Pool Id
   AWSCognito.config.region = 'us-east-1';
   AWSCognito.config.credentials = new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: 'us-east-1:7b03a871-254e-41fa-8ea9-d545e867467a'
+    IdentityPoolId: ''
   });
 
   this.getUserPool = function () {
     var poolData = {
-      UserPoolId: 'us-east-1_xbZOOTbkW',
-      ClientId: '33umfcdbr7c8h948bkpmodmfks'
+      UserPoolId: '', //user pool id
+      ClientId: '' //client id
     };
     var userPool = new AWSCognito.CognitoIdentityServiceProvider.CognitoUserPool(poolData);
     return userPool;
